@@ -67,8 +67,7 @@ const AddStock = () => {
     }
   };
 
-  // Function to render stock graphs based on fetched data
-  // Function to render stock graphs based on fetched data
+// Function to render stock graphs based on fetched data
 const renderStockGraphs = () => {
   try {
     // Return null if no stock data available
@@ -130,15 +129,18 @@ const renderStockGraphs = () => {
       if (!stockData || !interval) {
         throw new Error("Stock data or interval is not available.");
       }
+      
       // Determine time series key based on interval
       const timeSeriesKey = interval === 'day' ? 'Time Series (Daily)' :
                              interval === 'week' ? 'Weekly Time Series' :
                              interval === 'month' ? 'Monthly Time Series' :
                              interval === 'intraday' ? 'Time Series (5min)' : '';
+      
       // Extract time series data and meta data from stockData
       const timeSeries = stockData[0][timeSeriesKey];
       const metaData = stockData[0]['Meta Data'];
       const company = metaData['2. Symbol'];
+      
       // Extract dates and highs from time series data
       const dates = Object.keys(timeSeries).slice(0, 100);
       const highs = Object.values(timeSeries).slice(0, 100).map(data => data['2. high']);
@@ -147,14 +149,18 @@ const renderStockGraphs = () => {
       if (auth.user) {
         // Fetch existing stock data for the user
         const existingStock = await StockDataService.getStockByCompany(auth.user.uid, company);
+        
         // Update or add stock data based on existence
         if (existingStock) {
+          // Update existing stock
           await StockDataService.updateStock(auth.user.uid, existingStock.id, dates, highs, interval);
           console.log("Existing stock updated successfully!");
         } else {
+          // Add new stock
           await StockDataService.addStockToUser(auth.user.uid, company, dates, highs, interval);
           console.log("New stock added to user successfully!");
         }
+        
         // Reset states and clear error
         setError(null);
         setStockData(null);
@@ -169,6 +175,7 @@ const renderStockGraphs = () => {
       setError(error.message);
     }
   };
+  
 
   // Return JSX for AddStock component
   return (

@@ -43,7 +43,7 @@ function App() {
             <Route path="/businessnews" element={<BusinessNews />} />
           </Routes>
         </main>
-        <footer className="footer bg-dark text-white text-center py-3">
+        <footer className="footer">
           <div className="container">
             &copy; 2024 TradeTrove. All Rights Reserved.
           </div>

@@ -104,7 +104,7 @@ const Advice = () => {
                 return <Message key={i} model={message} />
               })}
             </MessageList>
-            <MessageInput placeholder="Send a Message" onSend={handleSendRequest} /> // Message input component for sending messages       
+            <MessageInput placeholder="Send a Message" onSend={handleSendRequest} /> {/* Message input component for sending messages*/}       
           </ChatContainer>
         </MainContainer>
       </div>
