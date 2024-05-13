@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/stock-market-app/static/css/main.a9fefcd4.css",
+    "main.js": "/stock-market-app/static/js/main.e931d7c1.js",
+    "static/js/453.99dcf01f.chunk.js": "/stock-market-app/static/js/453.99dcf01f.chunk.js",
+    "static/media/treasure_chest.png": "/stock-market-app/static/media/treasure_chest.772c8a61c5db39e0ed8e.png",
+    "index.html": "/stock-market-app/index.html",
+    "main.a9fefcd4.css.map": "/stock-market-app/static/css/main.a9fefcd4.css.map",
+    "main.e931d7c1.js.map": "/stock-market-app/static/js/main.e931d7c1.js.map",
+    "453.99dcf01f.chunk.js.map": "/stock-market-app/static/js/453.99dcf01f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9fefcd4.css",
+    "static/js/main.e931d7c1.js"
+  ]
+}
