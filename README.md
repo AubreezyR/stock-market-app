@@ -11,6 +11,7 @@ This is a web application for managing your stock portfolio. You can search for 
 - View interactive graphs for stock data
 - Save stocks to your portfolio
 - Update existing stocks in your portfolio
+- View Recent fiancial news and articles
 
 ## Installation
 
