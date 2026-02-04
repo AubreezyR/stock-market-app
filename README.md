@@ -1,5 +1,5 @@
 
-# Stock Portfolio Management App
+# Stock Watch (Stock Portfolio Management App)
 
 ## Description
 
